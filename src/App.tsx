@@ -1,12 +1,12 @@
 import React from "react";
-import Hero from "./components/Hero/Hero";
+import { GlobalStyles } from "./styles/global";
 import Level1 from "./components/Levels/Level1/Level1";
 
 function App() {
   return (
     <>
+      <GlobalStyles />
       <Level1 />
-      <Hero />
     </>
   );
 }

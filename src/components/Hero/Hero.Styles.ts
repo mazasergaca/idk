@@ -6,12 +6,15 @@ type StylesProps = {
   y: number;
 };
 
-export const Wrapper = styled.div<StylesProps>`
+export const Wrapper = styled.div.attrs<StylesProps>(({ y, x }) => ({
+  style: {
+    top: y + "px",
+    left: x + "px",
+  },
+}))<StylesProps>`
   height: 50px;
   width: 50px;
   position: absolute;
-  top: ${(props) => props.y + "px"};
-  left: ${(props) => props.x + "px"};
 
   background-color: #fff;
 `;
